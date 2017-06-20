@@ -14,12 +14,16 @@ module.exports = function(source) {
   const opts = loaderUtils.getOptions(this);
   const release = opts ? opts.release : false;
 
+  const buildPath = opts ? opts.path : undefined
+  if (buildPath === undefined) {
+    return callback(new Error('You must set the `path` option to the path to webpack output relative to project root'), null)
+  }
+
   const rustTarget = `wasm32-unknown-emscripten`;
 
   const outDir = path.join(srcDir, 'target', rustTarget, (release ? 'release' : 'debug'));
   const outFile = path.join(outDir, `${packageName}.js`);
   const cmd = `cargo build --target=${rustTarget}${release ? ' --release' : ''}`;
-
   const self = this;
   child_process.exec(cmd, { cwd: this.context }, function(error, stdout, stderr) {
     if (error) { return callback(error, null); }
@@ -37,7 +41,7 @@ module.exports = function(source) {
     // This object is passed to the Emscripten 'glue' code
     const Module = {
       // Path in the built project to the wasm file
-      wasmBinaryFile: `/${packageName}.wasm`,
+      wasmBinaryFile: path.join(buildPath, `${packageName}.wasm`),
       // Indicates that we are NOT running in node, despite 'require' being defined
       ENVIRONMENT: 'WEB',
     }
