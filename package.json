@@ -1,15 +1,15 @@
 {
-  "name": "rust-emscripten-loader",
-  "version": "0.0.1",
-  "author": "Matt Dziuban",
-  "description": "Rust loader module for webpack",
+  "name": "rust-wasm-loader",
+  "version": "0.1.0",
+  "author": "Ian J Sikes",
+  "description": "Webpack loader for Rust compiled to WebAssembly using Emscripten",
   "dependencies": {
     "loader-utils": "^1.0.3",
     "toml": "^2.3.2"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mrdziuban/rust-emscripten-loader"
+    "url": "git@github.com:ianjsikes/rust-wasm-loader"
   },
   "main": "index.js",
   "license": "MIT"
