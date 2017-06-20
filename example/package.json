@@ -1,15 +1,15 @@
 {
-  "name": "rust-emscripten-loader-example",
-  "version": "0.0.1",
-  "description": "",
-  "author": "Matt Dziuban",
+  "name": "rust-wasm-loader-example",
+  "version": "0.1.0",
+  "description": "A simple Hello World example of rust-wasm-loader",
+  "author": "Ian J Sikes",
   "license": "UNLICENSED",
   "scripts": {
     "compile": "webpack --progress",
     "serve": "http-server"
   },
   "dependencies": {
-    "rust-emscripten-loader": "../",
+    "rust-wasm-loader": "../",
     "http-server": "^0.9.0",
     "webpack": "^2.2.1"
   }

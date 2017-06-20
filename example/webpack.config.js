@@ -1,13 +1,24 @@
 module.exports = {
-  entry: {
-    asmjs: './src/asm.js',
-    wasm: './src/wasm.js'
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: __dirname + '/build',
   },
-  output: { filename: 'bundle/[name].js' },
   module: {
     rules: [
-      { test: /\.rs$/, loader: 'rust-emscripten-loader' }
+      {
+        test: /\.rs$/,
+        use: {
+          loader: 'rust-wasm-loader',
+          options: {
+            path: 'build/',
+          }
+        }
+      }
     ]
   },
-  node: { fs: 'empty' }
+  externals: {
+    'fs': true,
+    'path': true,
+  },
 }

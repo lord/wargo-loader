@@ -1,7 +1,7 @@
 [package]
-authors = ["Matt Dziuban <mrdziuban@gmail.com>"]
-name = "rust-emscripten-loader-example"
+authors = ["Ian J Sikes <ianjsikes@gmail.com>"]
+name = "rust-wasm-loader-example"
 version = "0.1.0"
 
 [dependencies]
-webplatform = { git = "https://github.com/mrdziuban/rust-webplatform.git" }
+webplatform = "0.4.2"

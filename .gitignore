@@ -9,5 +9,5 @@ build/Release
 # Dependency directory
 node_modules
 
-example/bundle
+example/build
 example/target
