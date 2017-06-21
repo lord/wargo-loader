@@ -72,3 +72,6 @@ The following options can be added to the Webpack loader query:
 ### Example
 
 Check out the [example](example) directory for a simple Hello World example.
+
+This project is based off of [rust-emscripten-loader](https://github.com/mrdziuban/rust-emscripten-loader)
+by [mrdziuban](https://github.com/mrdziuban).
