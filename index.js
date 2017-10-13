@@ -35,7 +35,7 @@ module.exports = function(source) {
     release ? 'release' : 'debug'
   )
   const outFile = path.join(outDir, `${packageName}.js`)
-  const cmd = `cargo build --target=${rustTarget}${release ? ' --release' : ''}`
+  const cmd = `cargo wasm build --target=${rustTarget}${release ? ' --release' : ''}`
   const self = this
   child_process.exec(cmd, { cwd: this.context }, function(
     error,
