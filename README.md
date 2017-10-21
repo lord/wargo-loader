@@ -1,4 +1,3 @@
-# Rust WebAssembly loader
 <p align="center">
   <img src="https://raw.githubusercontent.com/lord/img/master/logo-wargo-loader.png" alt="wargo-loader: Rust for Webpack" width="226">
   <br>
