@@ -1,7 +1,0 @@
-[package]
-authors = ["Ian J Sikes <ianjsikes@gmail.com>"]
-name = "rust-wasm-loader-example"
-version = "0.1.0"
-
-[dependencies]
-webplatform = "0.4.2"
