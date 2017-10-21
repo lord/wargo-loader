@@ -26,6 +26,8 @@ module.exports = function(source) {
     )
   }
 
+  const rustTarget = `wasm32-unknown-emscripten`
+
   const outDir = path.join(
     srcDir,
     'target',
