@@ -1,6 +1,10 @@
 # Rust WebAssembly loader
-
-[![npm](https://img.shields.io/npm/v/rust-wasm-loader.svg)](https://www.npmjs.com/package/rust-wasm-loader)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/lord/img/master/logo-wargo-loader.png" alt="wargo-loader: Rust for Webpack" width="226">
+  <br>
+  <a href="https://travis-ci.org/lord/wargo-loader"><img src="https://travis-ci.org/lord/wargo-loader.svg?branch=master" alt="Build Status"></a>
+  <a href="https://www.npmjs.com/package/wargo-loader"><img src="https://img.shields.io/npm/v/wargo-loader.svg" alt="NPM Version"></a>
+</p>
 
 ### Usage
 
@@ -10,7 +14,7 @@ more details on using Rust to target the web.
 To use it, first install the package:
 
 ```bash
-$ npm install rust-wasm-loader
+$ npm install wargo-loader
 ```
 
 Configure the loader in your Webpack config:
@@ -23,7 +27,7 @@ module.exports = {
       {
         test: /\.rs$/,
         use: {
-          loader: 'rust-wasm-loader',
+          loader: 'wargo-loader',
           options: {
             // Path to your 'build' or 'dist' directory relative to project root
             path: 'build/',
@@ -37,9 +41,6 @@ module.exports = {
 ```
 
 Note: if you are using `file-loader`, make sure to add `.wasm` to the test field, otherwise the module will not be copied! (e.g. `test: /\.(wasm|jpg|jpeg|png|gif|svg|eot|ttf|woff|woff2)$/i,`).
-
-Make sure you have the `cargo`, `rustc`, and `emsdk` binaries somewhere in your `PATH`.
-Require and initialize the wasm module:
 
 ```js
 const wasm = require('./main.rs')

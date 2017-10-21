@@ -1,18 +1,16 @@
 {
   "name": "rust-autowasm-loader",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Ian J Sikes",
-  "description": "Webpack loader for Rust compiled to WebAssembly using Emscripten, with auto-installing Emscripten",
+  "description": "Embed Rust in your webpack, with auto-installing Emscripten",
   "dependencies": {
     "loader-utils": "^1.0.3",
-    "toml": "^2.3.2"
+    "toml": "^2.3.2",
+    "wargo": "^0.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ianjsikes/rust-wasm-loader"
-  },
-  "scripts": {
-    "install": "cargo install cargo-wasm | true"
+    "url": "git@github.com:lord/wargo-loader"
   },
   "main": "index.js",
   "license": "MIT"
