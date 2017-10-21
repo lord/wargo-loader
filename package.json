@@ -1,5 +1,5 @@
 {
-  "name": "rust-autowasm-loader",
+  "name": "wargo-loader",
   "version": "0.1.0",
   "author": "Ian J Sikes",
   "description": "Embed Rust in your webpack, with auto-installing Emscripten",
