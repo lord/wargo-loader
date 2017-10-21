@@ -26,8 +26,6 @@ module.exports = function(source) {
     )
   }
 
-  const rustTarget = `wasm32-unknown-emscripten`
-
   const outDir = path.join(
     srcDir,
     'target',
@@ -35,7 +33,7 @@ module.exports = function(source) {
     release ? 'release' : 'debug'
   )
   const outFile = path.join(outDir, `${packageName}.js`)
-  const cmd = `wargo build --target=${rustTarget}${release ? ' --release' : ''}`
+  const cmd = `wargo build ${release ? ' --release' : ''}`
   const self = this
   child_process.exec(cmd, { cwd: this.context }, function(
     error,
