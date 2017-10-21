@@ -1,6 +1,6 @@
 {
   "name": "wargo-loader",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Ian J Sikes",
   "description": "Embed Rust in your webpack, with auto-installing Emscripten",
   "dependencies": {
